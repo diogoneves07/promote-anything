@@ -1,7 +1,7 @@
 .forms {
   text-align: left;
   padding: 10px;
-  background-color: #fff;
+  background-color: #1c1b22;
   width: 600px;
   border-radius: 0px 70px;
 
@@ -9,14 +9,16 @@
   overflow: hidden;
 }
 
+.forms fieldset {
+  background-color: #1c1b22;
+}
 .forms * {
-  color: #000;
   transition: all ease-in-out 1s;
 }
 
 .forms::before,
 .forms::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
 }
@@ -34,7 +36,7 @@
   animation: 20s forms-rotate-borders ease-in-out infinite;
   width: 100%;
   height: 100%;
-  background-color: #19c702;
+  background-color: rgb(2, 36, 86);
 }
 
 /* Inner Square */
@@ -43,7 +45,7 @@
   padding: 2px;
   border-radius: 0px;
   background-clip: content-box;
-  background-color: rgb(225, 225, 225);
+  background-color: #1c1b22;
 }
 
 .forms legend {
@@ -110,14 +112,14 @@
   font-size: 16px;
 }
 
-.forms button[color="green"] {
+.forms button[color='green'] {
   border-color: green;
 }
 
-.forms button[color="red"] {
+.forms button[color='red'] {
   border-color: red;
 }
 
-.forms button[color="blue"] {
+.forms button[color='blue'] {
   border-color: blue;
 }

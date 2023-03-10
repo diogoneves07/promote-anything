@@ -1,0 +1,15 @@
+.home {
+  max-width: 850px;
+  padding: 2%;
+}
+
+.home p {
+  margin-top: 40px;
+}
+.homeProducts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}

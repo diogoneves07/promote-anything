@@ -1,4 +1,4 @@
-import { FormLayout } from "./form-layout";
+import FormLayout from './form-layout';
 
 export default function LoginForm() {
   return (

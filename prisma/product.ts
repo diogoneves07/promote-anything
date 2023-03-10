@@ -1,4 +1,4 @@
-import { PrismaClient, Prisma } from "@prisma/client";
+import { PrismaClient, Prisma } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -25,7 +25,7 @@ export const addProduct = async (product: Prisma.ProductCreateInput) => {
 
 export const updateProduct = async (
   id: string,
-  updateData: Prisma.ProductCreateInput
+  updateData: Prisma.ProductCreateInput,
 ) => {
   const product = await prisma.product.update({
     where: {

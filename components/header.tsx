@@ -1,5 +1,5 @@
-import headerStyles from "./header.module.css";
-import { ThirtyFpsSelectOutlined } from "@mui/icons-material";
+import headerStyles from '../styles/header.module.css';
+import { ThirtyFpsSelectOutlined } from '@mui/icons-material';
 
 export default function Header() {
   return (
@@ -7,7 +7,7 @@ export default function Header() {
       <div>
         <a href=".">
           <ThirtyFpsSelectOutlined />
-          Promote everything!
+          Promote anything!
         </a>
       </div>
     </header>

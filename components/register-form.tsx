@@ -1,4 +1,4 @@
-import { FormLayout } from "./form-layout";
+import FormLayout from './form-layout';
 
 export default function RegisterForm() {
   return (
@@ -15,9 +15,6 @@ export default function RegisterForm() {
         </label>
 
         <div>
-          <button type="button" color="blue">
-            Copy token
-          </button>
           <button type="submit" color="green">
             Create account
           </button>

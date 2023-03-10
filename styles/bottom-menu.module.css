@@ -1,11 +1,11 @@
-.header {
+.bottomNavigation {
   height: 55px;
   float: left;
   width: 100%;
   color: #fff;
   background-color: transparent;
 }
-.headerFixed {
+.bottomNavigationFixed {
   position: fixed;
   bottom: 0px;
   left: 0px;
@@ -15,38 +15,38 @@
   z-index: 99999;
 }
 
-.headerFixed div {
+.bottomNavigationFixed div {
   height: 100%;
-  overflow: auto;
+  overflow-x: auto;
+
   white-space: nowrap;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.buttonFloatLeft {
-  margin-left: auto;
-}
-
-.headerFixed button {
-  height: 35px;
+.bottomNavigationFixed button {
+  height: 40px;
   margin: 0 20px;
-  min-width: 100px;
   background-color: rgb(2, 22, 53);
   text-align: center;
   font-size: 13px;
-  border-radius: 0px;
-  padding: 0;
+  padding: 5px;
+  border-radius: 0;
 }
 
-.headerFixed svg {
+.bottomNavigationFixed button:hover {
+  background-color: rgb(3, 29, 69);
+}
+
+.bottomNavigationFixed svg {
   font-size: 30px;
   position: relative;
   top: -3px;
   left: -3px;
 }
 
-.headerFixed a {
+.bottomNavigationFixed a {
   width: 100%;
   height: 100%;
   float: left;
@@ -55,16 +55,4 @@
   justify-content: center;
   padding: 10px;
   color: #fff;
-}
-
-.addProduct button {
-  border-radius: 100%;
-  padding: 10px 20px;
-  position: fixed;
-  left: 50%;
-  bottom: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(1, 18, 43);
 }

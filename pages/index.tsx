@@ -1,17 +1,15 @@
-import Head from "next/head";
-import ExampleProducts from "../components/example-products";
-import Layout from "../components/layout";
+import Head from 'next/head';
+import Layout from '../components/layout';
+import Home from '../components/home';
 
-export default function Home() {
+export default function Index() {
   return (
     <>
       <Head>
-        <title>Promote everything!</title>
+        <title>Promote anything!</title>
       </Head>
       <Layout>
-        <h2>Promote everything you want!</h2>
-
-        <ExampleProducts />
+        <Home />
       </Layout>
     </>
   );

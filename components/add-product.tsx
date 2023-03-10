@@ -1,10 +1,10 @@
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from '../styles/utils.module.css';
 
-import Layout from "../components/layout";
-import { FieldValues, useForm } from "react-hook-form";
-import { FormLayout } from "./form-layout";
-import clsx from "clsx";
-import { useRef } from "react";
+import Layout from '../components/layout';
+import { FieldValues, useForm } from 'react-hook-form';
+import FormLayout from './form-layout';
+import clsx from 'clsx';
+import { useRef } from 'react';
 
 export default function AddProduct() {
   const formElRef = useRef<HTMLFormElement>(null);
@@ -13,14 +13,14 @@ export default function AddProduct() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    mode: "onChange",
+    mode: 'onChange',
     shouldFocusError: true,
   });
 
   function onSubmit(fieldValues: FieldValues) {
     console.log(fieldValues);
-    fetch("/api/product", {
-      method: "POST",
+    fetch('/api/product', {
+      method: 'POST',
       body: JSON.stringify(fieldValues),
     })
       .then((e) => e.json())
@@ -28,7 +28,7 @@ export default function AddProduct() {
         console.log(e);
       })
       .catch(() => {
-        alert("m");
+        alert('m');
       });
   }
 
@@ -46,7 +46,7 @@ export default function AddProduct() {
               className={clsx({
                 [utilStyles.inputInvalid]: errors.title,
               })}
-              {...register("title", { required: true })}
+              {...register('title', { required: true })}
             />
           </label>
 
@@ -58,7 +58,7 @@ export default function AddProduct() {
               className={clsx({
                 [utilStyles.inputInvalid]: errors.desc,
               })}
-              {...register("desc", {
+              {...register('desc', {
                 required: true,
                 minLength: 50,
                 maxLength: 350,
@@ -70,7 +70,7 @@ export default function AddProduct() {
             <input
               type="url"
               placeholder="Product image"
-              {...register("imageLink")}
+              {...register('imageLink')}
             />
           </label>
           <label>
@@ -78,7 +78,7 @@ export default function AddProduct() {
             <input
               type="text"
               placeholder="Product price"
-              {...register("price")}
+              {...register('price')}
             />
           </label>
           <label>
@@ -86,7 +86,7 @@ export default function AddProduct() {
             <input
               type="url"
               placeholder="Product external link"
-              {...register("externalLink")}
+              {...register('externalLink')}
             />
           </label>
           <div>

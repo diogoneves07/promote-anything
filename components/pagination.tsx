@@ -1,5 +1,5 @@
-import { useState, MouseEvent, ChangeEvent } from "react";
-import TablePagination from "@mui/material/TablePagination";
+import { useState, MouseEvent, ChangeEvent } from 'react';
+import TablePagination from '@mui/material/TablePagination';
 
 export default function TablePaginationDemo() {
   const [page, setPage] = useState(2);
@@ -7,13 +7,13 @@ export default function TablePaginationDemo() {
 
   const handleChangePage = (
     event: MouseEvent<HTMLButtonElement> | null,
-    newPage: number
+    newPage: number,
   ) => {
     setPage(newPage);
   };
 
   const handleChangeRowsPerPage = (
-    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);

@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Este projeto ainda está em fase de rascunho, mas em breve estará disponível, bem configurado e com um artigo explicando passo a passo como usar e alterar a seu gosto! ❤️❤️

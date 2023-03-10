@@ -1,10 +1,13 @@
-import { Product } from "@prisma/client";
+import { Prisma } from '@prisma/client';
 
-export type ProductWithDateLikeString = Omit<Product, "createdAt"> & {
+export type ProductWithDateLikeString = Omit<
+  Prisma.ProductCreateInput,
+  'createdAt'
+> & {
   createdAt: string;
 };
 
-function productPropsWithDateToString(product: Product) {
+function productPropsWithDateToString(product: Prisma.ProductCreateInput) {
   const r: Record<string, any> = { ...product };
 
   for (const [key, value] of Object.entries(product)) {
@@ -17,19 +20,21 @@ function productPropsWithDateToString(product: Product) {
 }
 
 export function productsPropsWithDateToString(
-  products: Product[]
+  products: Prisma.ProductCreateInput[],
 ): ProductWithDateLikeString[];
 
 export function productsPropsWithDateToString(
-  product: Product
+  product: Prisma.ProductCreateInput,
 ): ProductWithDateLikeString;
 
-export function productsPropsWithDateToString(products: Product[] | Product) {
+export function productsPropsWithDateToString(
+  products: Prisma.ProductCreateInput[] | Prisma.ProductCreateInput,
+) {
   if (!Array.isArray(products)) {
     return productPropsWithDateToString(products);
   }
 
-  return (products as Product[]).map((e) => {
+  return (products as Prisma.ProductCreateInput[]).map((e) => {
     return productPropsWithDateToString(e);
   });
 }

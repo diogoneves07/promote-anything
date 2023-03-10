@@ -1,15 +1,15 @@
-import formLayoutStyles from "./form-layout.module.css";
+import formLayoutStyles from '../styles/form-layout.module.css';
 
-import { forwardRef, ForwardedRef, PropsWithChildren } from "react";
+import { forwardRef, ForwardedRef, PropsWithChildren } from 'react';
 
-export const FormLayout = forwardRef(function (
+export default forwardRef(function FormLayout(
   {
     children,
     onSubmit,
   }: PropsWithChildren<{
     onSubmit?: () => void;
   }>,
-  ref: ForwardedRef<HTMLFormElement>
+  ref: ForwardedRef<HTMLFormElement>,
 ) {
   return (
     <form ref={ref} className={formLayoutStyles.forms} onSubmit={onSubmit}>
